@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+  "name": "Notion Favicon Fixer",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": ["https://notion.so/*", "https://www.notion.so/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "permissions": [],
+  "browser_action": {}
+}
