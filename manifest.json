@@ -1,13 +1,12 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Notion Favicon Fixer",
   "version": "1.0",
+  "icons": {"128": "icon.jpeg"},
   "content_scripts": [
     {
       "matches": ["https://notion.so/*", "https://www.notion.so/*"],
       "js": ["content.js"]
     }
-  ],
-  "permissions": [],
-  "browser_action": {}
+  ]
 }
