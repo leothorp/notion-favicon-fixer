@@ -1,20 +1,22 @@
-var FAVICON = "https://www.notion.so/images/favicon.ico"
+const FAVICON_URL = "https://www.notion.so/images/favicon.ico";
+
+const getFaviconDomEl = () => document.querySelector("link[rel~='icon']");
 
 const setFavicon = () => {
-  var link = document.querySelector("link[rel~='icon']");
-  link.href = FAVICON;
+  const linkEl = getFaviconDomEl();
+  linkEl.href = FAVICON_URL;
 }
-
-let options = {
-  attributeFilter: ['href'],
-};
 
 const observer = new MutationObserver((mutationList) => {
   mutationList.forEach((mutation) => {
-    if (mutation.target.href !== FAVICON) {
-      setFavicon()
+    if (mutation.target.href !== FAVICON_URL) {
+      setFavicon();
     }
   })
 })
 
-observer.observe(document.querySelector("link[rel~='icon']"), options);
+const options = {
+  attributeFilter: ['href'],
+};
+
+observer.observe(getFaviconDomEl(), options);
