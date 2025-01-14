@@ -1,5 +1,6 @@
 {
   "manifest_version": 3,
+  "description": "This extension prevents the Notion browser tab icon from changing.", 
   "name": "Notion Favicon Fixer",
   "version": "1.0.1",
   "icons": {"128": "icon.jpeg"},
