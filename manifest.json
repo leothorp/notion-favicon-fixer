@@ -1,13 +1,29 @@
 {
   "manifest_version": 3,
-  "description": "This extension prevents the Notion browser tab icon from changing.", 
+  "description": "This extension prevents the Notion browser tab icon from changing.",
   "name": "Notion Favicon Fixer",
-  "version": "1.0.1",
-  "icons": {"128": "icon.jpeg"},
+  "version": "1.1.0",
+  "icons": { "128": "icon.jpeg" },
   "content_scripts": [
     {
-      "matches": ["https://notion.so/*", "https://www.notion.so/*"],
+      "matches": [
+        "https://notion.so/*",
+        "https://www.notion.so/*",
+        "https://notion.com/*",
+        "https://www.notion.com/*"
+      ],
       "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["base-favicon.ico"],
+      "matches": [
+        "https://notion.so/*",
+        "https://www.notion.so/*",
+        "https://notion.com/*",
+        "https://www.notion.com/*"
+      ]
     }
   ]
 }
