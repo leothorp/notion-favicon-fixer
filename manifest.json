@@ -10,7 +10,8 @@
         "https://notion.so/*",
         "https://www.notion.so/*",
         "https://notion.com/*",
-        "https://www.notion.com/*"
+        "https://www.notion.com/*",
+        "https://app.notion.com/*"
       ],
       "js": ["content.js"]
     }
@@ -22,7 +23,8 @@
         "https://notion.so/*",
         "https://www.notion.so/*",
         "https://notion.com/*",
-        "https://www.notion.com/*"
+        "https://www.notion.com/*",
+        "https://app.notion.com/*"
       ]
     }
   ]
